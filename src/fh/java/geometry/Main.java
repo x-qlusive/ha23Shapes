@@ -1,6 +1,8 @@
 package fh.java.geometry;
 
 import fh.java.geometry.model.GeometricShape;
+import fh.java.geometry.model.threedim.ThreeDimensional;
+import fh.java.geometry.model.twodim.TwoDimensional;
 import fh.java.geometry.model.twodim.curved.Circle;
 import fh.java.geometry.model.twodim.quadrangular.Diamond;
 import fh.java.geometry.model.twodim.triangular.RightTriangle;
@@ -22,7 +24,7 @@ public class Main {
         List<GeometricShape> shapeList = new ArrayList<>();
         fillList(shapeList);
 
-        printList(shapeList);
+        sumArea(shapeList);
 
         List<Circle> circleList = new ArrayList<>();
         for (GeometricShape shape : shapeList){
@@ -52,25 +54,26 @@ public class Main {
     }
 
 
-    public void printList(List<GeometricShape> shapeList) {
-        System.out.println("------- for loop -----");
-        for (int pos = 0; pos < shapeList.size(); pos++) {
-            System.out.println(shapeList.get(pos));
-        }
+    public double sumArea(List<GeometricShape> shapeList) {
+        double areaSum = 0.0;
+        double periSum = 0.0;
+        double volSum = 0.0;
+        double surfSum = 0.0;
 
-        System.out.println("--------for each ------");
         for (GeometricShape shape : shapeList) {
-            System.out.println(shape);
+            if (shape instanceof TwoDimensional){
+                areaSum+=((TwoDimensional) shape).calcArea();
+                periSum+=((TwoDimensional) shape).calcPerimeter();
+            }
+            if (shape instanceof ThreeDimensional){
+                volSum+=((ThreeDimensional) shape).calculateVolume();
+                surfSum+=((ThreeDimensional) shape).calculateSurfaceArea();
+            }
         }
+    return areaSum;
+
         System.out.println("--------stream1 ------");
         shapeList
-                .stream()
-                .forEach(shape-> System.out.println(shape));
-        System.out.println("--------stream2 ------");
-
-        shapeList
-                .stream()
-                .forEach(System.out::println);
 
 
     }
