@@ -29,6 +29,7 @@ public class Main {
     }
 
     private void doIt() {
+
         List<GeometricShape> shapeListTwoDim = new ArrayList<>();
         List<GeometricShape> shapeListThreeDim = new ArrayList<>();
         fillList(shapeListTwoDim, shapeListThreeDim);
@@ -42,28 +43,24 @@ public class Main {
         shapeListTwo.add(new Circle(1, 2, 2.0));
         shapeListTwo.add(new Circle(1, 3, 3.0));
         shapeListTwo.add(new Circle(1, 4, 4.0));
-
         shapeListTwo.add(new RightTriangle(11, 22, 10.0, 11.0));
         shapeListTwo.add(new RightTriangle(11, 22, 10.0, 11.0));
-
+        shapeListTwo.add(new RightTriangle(11, 22, 10.0, 11.0));
         shapeListTwo.add(new Diamond(1, 2, 20.1, 20.2, 20.3));
         shapeListTwo.add(new Diamond(1, 2, 20.20, 21.11, 20.31));
-
+        shapeListTwo.add(new Diamond(1, 2, 20.20, 21.11, 20.31));
         shapeListThree.add(new Ball(1, 2, 3, 13.0));
         shapeListThree.add(new Ball(1, 2, 3, 14.0));
         shapeListThree.add(new Ball(1, 2, 3, 15.0));
-
         shapeListThree.add(new Cone(1, 2, 3, 5.0, 10.0, 15.0));
         shapeListThree.add(new Cone(1, 2, 3, 5.0, 10.0, 15.0));
         shapeListThree.add(new Cone(1, 2, 3, 5.0, 10.0, 15.0));
-
         shapeListThree.add(new Cuboid(1, 2, 3, 10.0, 15.0, 20.0));
         shapeListThree.add(new Cuboid(1, 2, 3, 10.0, 15.0, 20.0));
         shapeListThree.add(new Cuboid(1, 2, 3, 10.0, 15.0, 20.0));
-
     }
 
-    public double sumArea(List<GeometricShape> shapeList,String dimension) {
+    public void sumArea(List<GeometricShape> shapeList,String dimension) {
 
         for (GeometricShape shape : shapeList) {
             if (shape instanceof TwoDimensional) {
@@ -80,6 +77,5 @@ public class Main {
         shapeList
                 .stream()
                 .forEach(System.out::println);
-    return 0;}
-
+    }
 }
