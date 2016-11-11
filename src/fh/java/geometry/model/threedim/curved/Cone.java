@@ -50,8 +50,8 @@ public class Cone extends Curved3D {
     public String toString() {
         final StringBuffer sb = new StringBuffer("Cone{");
         sb.append("radius=").append(radius);
-        sb.append("height=").append(height);
-        sb.append("side=").append(side);
+        sb.append(", height=").append(height);
+        sb.append(", side=").append(side);
         sb.append(", Volume=").append(calculateVolume());
         sb.append(", Surface=").append(calculateSurfaceArea());
         sb.append('}');

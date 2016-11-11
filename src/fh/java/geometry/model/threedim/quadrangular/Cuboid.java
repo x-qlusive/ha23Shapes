@@ -51,8 +51,8 @@ public class Cuboid extends QuadrangularShape{
     public String toString() {
         final StringBuffer sb = new StringBuffer("Cuboid{");
         sb.append("side A=").append(sideA);
-        sb.append("side B=").append(sideB);
-        sb.append("side C=").append(sideC);
+        sb.append(", side B=").append(sideB);
+        sb.append(", side C=").append(sideC);
         sb.append(", Volume=").append(calculateVolume());
         sb.append(", Surface=").append(calculateSurfaceArea());
         sb.append('}');

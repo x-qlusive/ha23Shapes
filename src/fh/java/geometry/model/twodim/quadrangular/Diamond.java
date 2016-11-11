@@ -60,8 +60,8 @@ public class Diamond extends QuadrangularShape {
     public String toString() {
         final StringBuffer sb = new StringBuffer("Diamond{");
         sb.append("sideA=").append(sideA);
-        sb.append("diameter E").append(diamE);
-        sb.append("diameter F").append(diamF);
+        sb.append(", diameter E=").append(diamE);
+        sb.append(", diameter F=").append(diamF);
         sb.append(", area=").append(calcArea());
         sb.append(", perimeter=").append(calcPerimeter());
         sb.append('}');
