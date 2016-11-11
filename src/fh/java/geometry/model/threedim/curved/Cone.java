@@ -48,7 +48,7 @@ public class Cone extends Curved3D {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Circle{");
+        final StringBuffer sb = new StringBuffer("Cone{");
         sb.append("radius=").append(radius);
         sb.append("height=").append(height);
         sb.append("side=").append(side);

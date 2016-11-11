@@ -49,7 +49,7 @@ public class Cuboid extends QuadrangularShape{
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Circle{");
+        final StringBuffer sb = new StringBuffer("Cuboid{");
         sb.append("side A=").append(sideA);
         sb.append("side B=").append(sideB);
         sb.append("side C=").append(sideC);

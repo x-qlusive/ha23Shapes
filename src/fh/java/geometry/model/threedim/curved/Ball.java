@@ -26,7 +26,7 @@ public class Ball extends Curved3D{
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Circle{");
+        final StringBuffer sb = new StringBuffer("Ball{");
         sb.append("radius=").append(radius);
         sb.append(", Volume=").append(calculateVolume());
         sb.append(", Surface=").append(calculateSurfaceArea());
